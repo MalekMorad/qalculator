@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="15cf4c66-2c9f-4659-a819-36df07c4947a" name="3und20Webhost">
+        <fileTransfer rootFolder="/qr-calculator" accessType="SFTP" host="access862814142.webspace-data.io" port="22" sshConfigId="705e295f-71ca-4e22-9fc5-e058855bf047" sshConfig="u103988211@access862814142.webspace-data.io:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
