@@ -1,11 +1,7 @@
 /*GENERAL*/
 :root{
-    /*
     --textColor: #212529;
-    --bgColor: #f8f9fa:
-    */
-    --textColor: #f8f9fa;
-    --bgColor: #212529;
+    --bgColor: #f8f9fa;
     
     --colorPrimary: #ef8354;
     --colorSecondary: #4f5d75;
@@ -22,7 +18,7 @@ html{
 
 body{
     margin: 0;
-    background-color: var(--bgColor);
+    background-color: var(--colorBg);
 }
 
 /*HEADER*/
@@ -57,16 +53,16 @@ header{
     fill: #e9ecef;
     stroke: #f8f9fa;
 }
-.btn-darkmodeToggle:hover, .btn-darkmodeToggle:focus{
+.btn-darkmodeToggle:hover{
     background-color: #dee2e6;
 }
-.btn-darkmodeToggle:hover svg, .btn-darkmodeToggle:focus svg{
+.btn-darkmodeToggle:hover svg{
     fill: #212529;
 }
-.btn-darkmodeToggle.dark:hover, .btn-darkmodeToggle.dark:focus{
+.btn-darkmodeToggle.dark:hover{
     background-color: #495057;
 }
-.btn-darkmodeToggle.dark:hover svg, .btn-darkmodeToggle.dark:hover svg{
+.btn-darkmodeToggle.dark:hover svg{
     fill: #ffd000;
 }
 
