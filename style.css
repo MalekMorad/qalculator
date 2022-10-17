@@ -1,8 +1,76 @@
-body{
-    overflow: hidden;
-    box-sizing: border-box;
-    border: 1px solid red;
+/*GENERAL*/
+:root{
+    /*
+    --textColor: #212529;
+    --bgColor: #f8f9fa:
+    */
+    --textColor: #f8f9fa;
+    --bgColor: #212529;
+    
+    --colorPrimary: #ef8354;
+    --colorSecondary: #4f5d75;
+    --foFa: "Montserrat";
 }
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: var(--bgColor);
+}
+
+/*HEADER*/
+header{
+    height: 6.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/*Darkmode toggle*/
+.btn-darkmodeToggle{
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+.btn-darkmodeToggle svg{
+    fill: transparent;
+    stroke: #212529;
+    transition: all .3s ease-in;
+}
+.btn-darkmodeToggle.dark svg{
+    fill: #e9ecef;
+    stroke: #f8f9fa;
+}
+.btn-darkmodeToggle:hover, .btn-darkmodeToggle:focus{
+    background-color: #dee2e6;
+}
+.btn-darkmodeToggle:hover svg, .btn-darkmodeToggle:focus svg{
+    fill: #212529;
+}
+.btn-darkmodeToggle.dark:hover, .btn-darkmodeToggle.dark:focus{
+    background-color: #495057;
+}
+.btn-darkmodeToggle.dark:hover svg, .btn-darkmodeToggle.dark:hover svg{
+    fill: #ffd000;
+}
+
+/*MAIN*/
 
 .main-container{
     display: flex;
