@@ -44,10 +44,14 @@ class DarkMode{
             if(darkmode){
                 $(":root").css("--colorText", "#f8f9fa");
                 $(":root").css("--colorBg", "#212529");
+                $("h1").addClass("neon");
+                $(".neonContainer").addClass("flicker");
                 this.doms.button.addClass("dark");
             }else{
                 $(":root").css("--colorText", "#212529");
                 $(":root").css("--colorBg", "#f8f9fa");
+                $("h1").removeClass("neon");
+                $(".neonContainer").removeClass("flicker");
                 this.doms.button.removeClass("dark");
             }
         }

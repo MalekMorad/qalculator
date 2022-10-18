@@ -1,6 +1,24 @@
 /*GENERAL*/
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Light.ttf");
+    font-weight: 300;
+    font-style: light;
+}@font-face{
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+    font-style: bold;
+}
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root{
-    --textColor: #212529;
+    --colorText: #212529;
     --bgColor: #f8f9fa;
     
     --colorPrimary: #ef8354;
@@ -19,6 +37,49 @@ html{
 body{
     margin: 0;
     background-color: var(--colorBg);
+}
+
+/*Fonts*/
+h1,h2,h3,h4,h5,p,span,button,li{
+    font-family: var(--foFa);
+    color: var(--colorText);
+}
+h1{
+    margin: 25px 0;
+    font-size: 4.8rem;
+}
+.neon{
+    text-shadow: 
+    0 0 0.033em #fff, 
+    0 0 0.08em #fff, 
+    0 0 0.1em #7a27ff, 
+    0 0 0.2em #7a27ff, 
+    0 0 0.3em #7a27ff, 
+    0 0 1em #7a27ff, 
+    0 0 1.5em #7a27ff;
+}
+.flicker {
+    animation: flicker 3s linear forwards alternate infinite;
+}
+@keyframes flicker {
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    72%,
+    100% {
+        opacity: 1;
+    }
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    71.999% {
+        opacity: 0.33;
+    }
 }
 
 /*HEADER*/
@@ -77,3 +138,16 @@ header{
     padding: 20px;
     box-sizing: border-box;
 }
+#video{
+    width: 85vw;
+    max-width: 800px;
+    height: auto;
+    margin: 0 0 32px 0;
+}
+
+ button{
+    opacity: .4;
+ }
+
+
+
