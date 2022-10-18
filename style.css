@@ -1,8 +1,133 @@
-body{
-    overflow: hidden;
-    box-sizing: border-box;
-    border: 1px solid red;
+/*GENERAL*/
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Light.ttf");
+    font-weight: 300;
+    font-style: light;
+}@font-face{
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+    font-style: bold;
 }
+@font-face{
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --colorText: #212529;
+    --bgColor: #f8f9fa;
+    
+    --colorPrimary: #ef8354;
+    --colorSecondary: #4f5d75;
+    --foFa: "Montserrat";
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    background-color: var(--colorBg);
+}
+
+/*Fonts*/
+h1,h2,h3,h4,h5,p,span,button,li{
+    font-family: var(--foFa);
+    color: var(--colorText);
+}
+h1{
+    margin: 25px 0;
+    font-size: 4.8rem;
+}
+.neon{
+    text-shadow: 
+    0 0 0.033em #fff, 
+    0 0 0.08em #fff, 
+    0 0 0.1em #7a27ff, 
+    0 0 0.2em #7a27ff, 
+    0 0 0.3em #7a27ff, 
+    0 0 1em #7a27ff, 
+    0 0 1.5em #7a27ff;
+}
+.flicker {
+    animation: flicker 3s linear forwards alternate infinite;
+}
+@keyframes flicker {
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    72%,
+    100% {
+        opacity: 1;
+    }
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    71.999% {
+        opacity: 0.33;
+    }
+}
+
+/*HEADER*/
+header{
+    height: 6.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/*Darkmode toggle*/
+.btn-darkmodeToggle{
+    height: 4.2rem;
+    width: 4.2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+.btn-darkmodeToggle svg{
+    fill: transparent;
+    stroke: #212529;
+    transition: all .3s ease-in;
+}
+.btn-darkmodeToggle.dark svg{
+    fill: #e9ecef;
+    stroke: #f8f9fa;
+}
+.btn-darkmodeToggle:hover{
+    background-color: #dee2e6;
+}
+.btn-darkmodeToggle:hover svg{
+    fill: #212529;
+}
+.btn-darkmodeToggle.dark:hover{
+    background-color: #495057;
+}
+.btn-darkmodeToggle.dark:hover svg{
+    fill: #ffd000;
+}
+
+/*MAIN*/
 
 .main-container{
     display: flex;
@@ -13,3 +138,16 @@ body{
     padding: 20px;
     box-sizing: border-box;
 }
+#video{
+    width: 85vw;
+    max-width: 800px;
+    height: auto;
+    margin: 0 0 32px 0;
+}
+
+ button{
+    opacity: .4;
+ }
+
+
+
