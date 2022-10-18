@@ -1,6 +1,6 @@
 import { loadBinarized } from "../../tests/helpers";
 import { BitMatrix } from "../BitMatrix";
-import { extract } from "./";
+import { extract } from "./index";
 
 function matricCompare(a: BitMatrix, b: BitMatrix) {
   if (!(a.height === b.height && a.width === b.width)) {

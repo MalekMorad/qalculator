@@ -1,5 +1,5 @@
 import {loadBinarized} from "../../tests/helpers";
-import {locate} from "./";
+import {locate} from "./index";
 
 describe("locate", () => {
   it("handles images with missing finder patterns", async () => {

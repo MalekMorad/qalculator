@@ -3,7 +3,7 @@
   "version": "1.4.0",
   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
   "repository": "https://github.com/cozmo/jsQR",
-  "main": "./dist/jsQR.js",
+  "main": "dist/jsQR.js",
   "types": "./dist/index.d.ts",
   "contributors": [
     {
@@ -36,8 +36,8 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+    "lint": "tslint --project ",
+    "generate-test-data": "ts-node --project tests tests/generate-test-data.ts"
   },
   "jest": {
     "testRegex": ".*test.ts",

@@ -30,7 +30,7 @@ jsQR(...);
 ```
 
 ### Browser
-Alternatively for frontend use [`jsQR.js`](./dist/jsQR.js) can be included with a script tag
+Alternatively for frontend use [`jsQR.js`](dist/jsQR.js) can be included with a script tag
 
 ```html
 <script src="jsQR.js"></script>
@@ -78,12 +78,12 @@ Has points for the following locations.
   - Finder patterns - `topRightFinderPattern`/`topLeftFinderPattern`/`bottomLeftFinderPattern`
   - May also have a point for the `bottomRightAlignmentPattern` assuming one exists and can be located.
 
-Because the library is written in [typescript](http://www.typescriptlang.org/) you can also view the [type definitions](./dist/index.d.ts) to understand the API.
+Because the library is written in [typescript](http://www.typescriptlang.org/) you can also view the [type definitions](dist/index.d.ts) to understand the API.
 
 ## Contributing
 
 jsQR is written using [typescript](http://www.typescriptlang.org/).
-You can view the development source in the [`src`](./src) directory.
+You can view the development source in the [`src`](src) directory.
 
 Tests can be run with
 
@@ -94,7 +94,7 @@ npm test
 Besides unit tests the test suite contains several hundred images that can be found in the [/tests/end-to-end/](./tests/end-to-end/) folder.
 
 Not all the images can be read. In general changes should hope to increase the number of images that read. However due to the nature of computer vision some changes may cause images that pass to start to fail and visa versa. To update the expected outcomes run `npm run-script generate-test-data`. These outcomes can be evaluated in the context of a PR to determine if a change improves or harms the overall ability of the library to read QR codes. A summary of which are passing
-and failing can be found at [/tests/end-to-end/report.json](./tests/end-to-end/report.json)
+and failing can be found at [/tests/end-to-end/report.json](tests/end-to-end/report.json)
 
 After testing any changes, you can compile the production version by running
 ```

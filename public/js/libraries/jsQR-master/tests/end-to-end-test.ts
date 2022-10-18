@@ -1,7 +1,7 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 import jsQR from "../src";
-import { loadPng } from "../tests/helpers";
+import { loadPng } from "./helpers";
 import * as helpers from "./helpers";
 
 describe("end to end", async () => {
