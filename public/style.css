@@ -1,66 +1,73 @@
 /*GENERAL*/
-@font-face{
+@font-face {
     font-family: 'Montserrat';
     src: url("../fonts/Montserrat-Light.ttf");
     font-weight: 300;
     font-style: light;
-}@font-face{
+}
+
+@font-face {
     font-family: 'Montserrat';
     src: url("../fonts/Montserrat-Bold.ttf");
     font-weight: 700;
     font-style: bold;
 }
-@font-face{
+
+@font-face {
     font-family: 'Montserrat';
     src: url("../fonts/Montserrat-Bold.ttf");
     font-weight: 400;
     font-style: normal;
 }
 
-:root{
+:root {
     --colorText: #212529;
     --bgColor: #f8f9fa;
-    
+
     --colorPrimary: #ef8354;
     --colorSecondary: #4f5d75;
     --foFa: "Montserrat";
 }
 
-html{
+html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
-*, *::before, *::after{
+
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
-body{
+body {
     margin: 0;
     background-color: var(--colorBg);
 }
 
 /*Fonts*/
-h1,h2,h3,h4,h5,p,span,button,li{
+h1, h2, h3, h4, h5, p, span, button, li {
     font-family: var(--foFa);
     color: var(--colorText);
 }
-h1{
+
+h1 {
     margin: 25px 0;
     font-size: 4.8rem;
 }
-.neon{
-    text-shadow: 
-    0 0 0.033em #fff, 
-    0 0 0.08em #fff, 
-    0 0 0.1em #7a27ff, 
-    0 0 0.2em #7a27ff, 
-    0 0 0.3em #7a27ff, 
-    0 0 1em #7a27ff, 
+
+.neon {
+    text-shadow: 0 0 0.033em #fff,
+    0 0 0.08em #fff,
+    0 0 0.1em #7a27ff,
+    0 0 0.2em #7a27ff,
+    0 0 0.3em #7a27ff,
+    0 0 1em #7a27ff,
     0 0 1.5em #7a27ff;
 }
+
 .flicker {
     animation: flicker 3s linear forwards alternate infinite;
 }
+
 @keyframes flicker {
     0%,
     19.999%,
@@ -83,7 +90,7 @@ h1{
 }
 
 /*HEADER*/
-header{
+header {
     height: 6.2rem;
     display: flex;
     justify-content: flex-end;
@@ -92,7 +99,7 @@ header{
 }
 
 /*Darkmode toggle*/
-.btn-darkmodeToggle{
+.btn-darkmodeToggle {
     height: 4.2rem;
     width: 4.2rem;
     border-radius: 50%;
@@ -105,31 +112,37 @@ header{
     cursor: pointer;
     transition: all .3s ease-in;
 }
-.btn-darkmodeToggle svg{
+
+.btn-darkmodeToggle svg {
     fill: transparent;
     stroke: #212529;
     transition: all .3s ease-in;
 }
-.btn-darkmodeToggle.dark svg{
+
+.btn-darkmodeToggle.dark svg {
     fill: #e9ecef;
     stroke: #f8f9fa;
 }
-.btn-darkmodeToggle:hover{
+
+.btn-darkmodeToggle:hover {
     background-color: #dee2e6;
 }
-.btn-darkmodeToggle:hover svg{
+
+.btn-darkmodeToggle:hover svg {
     fill: #212529;
 }
-.btn-darkmodeToggle.dark:hover{
+
+.btn-darkmodeToggle.dark:hover {
     background-color: #495057;
 }
-.btn-darkmodeToggle.dark:hover svg{
+
+.btn-darkmodeToggle.dark:hover svg {
     fill: #ffd000;
 }
 
 /*MAIN*/
 
-.main-container{
+.main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,16 +151,57 @@ header{
     padding: 20px;
     box-sizing: border-box;
 }
-#video{
+
+button {
+    opacity: .4;
+}
+
+div.video-container{
+    position: relative;
+}
+
+#link-container{
+    max-width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 15px 20px;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.4);
+    transition: all ease 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a#link{
+    font-size: 2vmax;
+    max-font-size: 15px;
+    width: 100%;
+    color: white;
+    word-break: break-all;
+}
+
+a#link:link{
+    text-decoration: none;
+}
+
+#link-container:hover{
+    width: 100%;
+    height: 100%;
+    background: black;
+    transition: all ease 0.5s;
+}
+
+#video {
     width: 85vw;
     max-width: 800px;
     height: auto;
     margin: 0 0 32px 0;
 }
-
- button{
-    opacity: .4;
- }
 
 
 

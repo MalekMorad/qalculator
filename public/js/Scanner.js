@@ -5,6 +5,7 @@ export class Scanner{
     canvas;
     video;
     isScanning;
+    result;
 
     constructor() {
         this.video = document.getElementById('video');
@@ -37,6 +38,16 @@ export class Scanner{
         const imageData = ctx.getImageData(0, 0, 500, 500);
 
         const result = jsQR(imageData.data, this.canvas.width, this.canvas.height);
-        console.log(result);
+
+        if(result){
+            if(result != this.result){
+                $('#link-container');
+                $('#link').attr('href',result.data);
+                $('#link').html(result.data)
+                $('#link-container').css('visibility', 'visible');
+            }
+            console.log(result);
+            this.result = result;
+        }
     }
 }
