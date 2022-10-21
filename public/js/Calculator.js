@@ -51,9 +51,12 @@ export default class Calculator {
                 break;
             case "(":
             case ")":
-                console.log(value)
                 this.history.push(value);
                 break;
+            case "delete":
+                this.setHistory(this.history.pop());
+            case "delete-all":
+                this.setHistory(["0"]);
             default:
                 break;
         }
@@ -84,6 +87,7 @@ export default class Calculator {
 
     getResult() {
         let result = "";
+
         for (value in this.history) {
             result += value;
         }
