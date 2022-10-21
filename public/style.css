@@ -152,7 +152,7 @@ header {
     box-sizing: border-box;
 }
 
-button {
+button:not(#link) {
     opacity: .4;
 }
 
@@ -177,16 +177,14 @@ div.video-container{
     align-items: center;
 }
 
-a#link{
+#link{
     font-size: 2vmax;
     max-font-size: 15px;
     width: 100%;
     color: white;
     word-break: break-all;
-}
-
-a#link:link{
-    text-decoration: none;
+    border: none;
+    background: transparent;
 }
 
 #link-container:hover{

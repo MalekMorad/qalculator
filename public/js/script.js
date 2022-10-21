@@ -1,4 +1,5 @@
 import {Scanner} from "./Scanner.js";
+import Calculator from "./Calculator.js";
 
 const ua = navigator.userAgent;
 const isMobile = /Android|webOS|iPhone|iPad|iPod/i.test(ua);
@@ -21,6 +22,7 @@ if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
     }
 
     const scanner = new Scanner();
+    const calculator = new Calculator();
 
     // start / stop scanning (+recording)
     cameraButton.on("click", () => {
@@ -36,10 +38,36 @@ if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
             })
         }
     })
+
+    $("#link").on('click', () => {
+        openLink();
+    })
+
+    function stopVideo() {
+        video.srcObject.getTracks().forEach((track) => {
+            track.stop();
+        })
+    }
+
+    async function openLink() {
+        const width = 250;
+        const height = 250;
+        const left = screen.width / 2 - width / 2;
+        const top = screen.height / 2 - height / 2;
+
+        const link = scanner.result.data;
+
+        const win = window.open(
+            link,
+            'Calculating',
+            `width=${width}, height=${height}, top=${top}, left=${left}`,
+        );
+        const timer = setInterval(() => {
+            if (win.closed) {
+                clearInterval(timer);
+                alert('"Secure Payment" window closed!');
+            }
+        }, 500);
+    }
 }
 
-function stopVideo(){
-    video.srcObject.getTracks().forEach((track) => {
-        track.stop();
-    })
-}
